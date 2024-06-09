@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    transition:0.2s;
+} 
+.body-container{
+    display: flex;
+    flex-direction:row;
+    padding-top:180px;
+    padding-bottom:75px;
+}
+.body-left{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space between;
+    align-items: start;
+}
+
+.body-left h1{
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    text-wrap:wrap;
+    font-size: 45px;
+    margin-bottom:20px;
+    color:white;
+    transition:0.2s;
+}
+.body-left p{
+    font-family: "Lexend", sans-serif;
+    font-weight: regular;
+    color:#D0C9E8;
+    font-size:19px;
+    line-height:25px;
+    text-wrap:wrap;
+    margin-bottom: 20px;
+}
+
+.body-buttons, .click-buttons{
+    display:flex;
+    justify-content: start;
+    gap:20px;
+}
+.body-buttons>button, .click-buttons>button{
+    font-size:15px;
+    font-weight: 500;
+    min-height:60px;
+    min-width:60px;
+    background-color:#f0f0f0;
+    color:rgb(43, 43, 43);
+    border-radius:100px;
+    border:none;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.body-right{
+    flex:1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* margin-right:80px; */
+}
+
+
+.download-resume{
+    text-wrap:nowrap;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:10px;
+    font-family: "Lexend", sans-serif;
+    font-size:15px;
+    font-weight: 500;
+    height:60px;
+    background-color:#f0f0f0;
+    padding:0px 20px;
+    border-radius:100px;
+    border:none;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.2s;
+    color:rgb(43, 43, 43);
+
+} 
+.download-resume:hover, .click-buttons>button:hover{
+    background-color:#e0d8ff;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 320px;
+    height: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    cursor: pointer;
+    transition:0.2s;
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container img {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 320px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 10px solid white;
+    
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+@media (max-width:1200px){
+    .body-left h1{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+    .body-left p{
+        font-size:16px;
+    }
+    .flip-container{
+        height:280px;
+        width:280px;
+    }
+    .flip-container img{
+        height:280px;
+        width:280px;
+    }
+}
+
+@media (max-width:1030px){
+    .body-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:100px;
+    }
+    .body-left h1{
+        font-size:25px;
+        text-align: center;
+        width: 100%;
+    }
+    .body-left p{
+        text-align: center;
+    }
+    .body-buttons{
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+@media (max-width:430px){
+    .body-left{
+        width:95%;
+    }
+    .body-left h1{
+        font-size:18px;
+
+        text-align: center;
+        width: 100%;
+    }
+    .body-left p{
+        text-align: center;
+    }
+    .body-buttons{
+        justify-content: center;
+        width: 100%;
+    }
+    .body-container{
+        padding-top:120px;
+    }
+    .body-buttons{
+        margin-top:20px;
+        flex-wrap:wrap;
+    }
+
+}
+
+.scrolldown-body{
+    opacity:1;
+    animation:fade-in linear;
+    animation-timeline:view();
+    animation-range-start: 0px;
+    animation-range-end: cover;
+    font-family: "Lexend", sans-serif;
+    color:white;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; 
+}
+.scrolldown-body>p{
+    margin-bottom: 10px;
+}
+
+
+@keyframes fade-in {
+    to{opacity:0;}
+}

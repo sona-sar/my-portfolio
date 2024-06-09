@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.header-container{
+    z-index:10000;
+    position: fixed;
+    width: 100%;
+}
+.header{
+    padding:20px 230px;
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
+    display:flex;
+    justify-content: space-between;
+    padding-top:30px;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.portfolio-text{
+    font-family: "Lexend", sans-serif;
+    font-weight:bold;
+    font-size:25px;
+    color:white;
+}
+.header-buttons{
+    display:flex;
+    gap:45px;
+}
+.header-buttons>button{
+    font-family: "Lexend", sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    background-color: transparent;
+    color:white;
+    /* padding:13px 27px; */
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    transition:0.2s;
+}
+.header-buttons>button:hover{
+    filter:drop-shadow(4px 4px 0px #260F82);
+    transform: translate(-4px, -4px);
+}
+
+.menu-container{
+    display:none;
+    background-color: transparent;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+/* Ensure these are in your styles */
+@media (max-width:1200px){
+    .header-buttons{
+        gap:25px;
+    }
+    .header-buttons>button{
+        font-size:16px;
+    }
+}
+@media (max-width:900px){
+
+    .menu-container{
+        display: block;
+    }
+    .header-buttons{
+        display: none;
+    }
+} 
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: rgb(37, 21, 116);
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .dropdown-menu.open {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .dropdown-menu button {
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.2s;
+  }
+  
+  .dropdown-menu button:hover {
+    filter: drop-shadow(4px 4px 0px #260F82);
+    transform: translate(-4px, -4px);
+  }
+  
+  @media (max-width: 900px) {
+    .header-buttons {
+      display: none;
+    }
+  }
+
+
+  @media (max-width: 1350px) {
+    .header {
+        padding:20px 100px;
+    }
+}
+@media (max-width: 700px) {
+    .header {
+        padding:20px 40px;
+        
+    }
+}
+@media (max-width: 400px) {
+    .header {
+        padding:20px 20px;
+    }
+}
+
+.dropButton:hover{
+    filter: drop-shadow(4px 4px 0px #5336c7) !important;
+}

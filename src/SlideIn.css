@@ -1,0 +1,11 @@
+  /* SlideInFromLeft.css */
+  .slide-in-section {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .slide-in-section.is-visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
