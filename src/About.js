@@ -37,7 +37,11 @@ function About() {
         </div>
         <div className="options-result">
           <div className={`section-content ${activeSection === 'experience' ? 'active fade-in' : ''}`}>
-              <div>
+            <div>
+              <h5>Snap Engineering Academy Scholar</h5>
+              <p>2024</p>
+            </div>
+            <div>
               <h5>USC ICT Project Intern</h5>
               <p>2024</p>
             </div>
@@ -48,6 +52,10 @@ function About() {
           </div>
           <div className={`section-content ${activeSection === 'education' ? 'active fade-in' : ''}`}>
             <div className='education-item'>
+              <h5>Loyola Marymount University</h5>
+              <p>2024-2026</p>
+            </div>
+            <div className='education-item'>
               <h5>Glendale Community College</h5>
               <p>2022-2024</p>
             </div>
@@ -55,24 +63,26 @@ function About() {
               <h5>TUMO Center of Creative Technologies</h5>
               <p>2017-2019</p>
             </div>
-            <div className='education-item'>
-              <h5>Loyola Marymount University</h5>
-              <p>2024-2026</p>
-            </div>
           </div>
           <div className={`section-content ${activeSection === 'skills' ? 'active fade-in' : ''}`}>
             <div>HTML</div>
             <div>CSS</div>
             <div>JavaScript</div>
-            <div>Java</div>
             <div>C++</div>
+            <div>Java</div>
+            <div>React JS</div>
+            <div>React Native</div>
+            <div>Node JS</div>
+            <div>Supabase</div>
+            <div>Firebase</div>
+            <div>Git</div>
+            <div>GitHub</div>
+            <div>Rest APIs</div>
             <div>GDScript</div>
             <div>Godot</div>
-            <div>React JS</div>
-            <div>Node JS</div>
             <div>Redux</div>
-            <div>Firebase</div>
             <div>Figma</div>
+            <div>Arduino</div>
           </div>
         </div>
       </div>

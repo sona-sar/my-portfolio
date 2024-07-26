@@ -2,8 +2,11 @@ import React from 'react'
 import "./Projects.css"
 
 function Projects() {
-    const openCalculator = () => {
-        window.open('https://github.com/sona-sar/calculator', '_blank');
+    const snapEvents = () => {
+        window.open('https://github.com/sona-sar/snap-events-feature', '_blank')
+    };
+    const kinoman = () => {
+        window.open('https://github.com/sona-sar/kinoman', '_blank')
     };
     const openArmeniaGo = () => {
         window.open('https://sona-sar.github.io/armeniago/', '_blank');
@@ -29,16 +32,26 @@ function Projects() {
     const openFlappyBird = () => {
         window.open('https://github.com/sona-sar/flappy-bird-web-game', '_blank');
     };
+    const openCalculator = () => {
+        window.open('https://github.com/sona-sar/calculator', '_blank');
+    };
   return (
     <div className='Projects'>
         <div className = "projects-container">
             <div className = "project">
-                <button onClick = {openCalculator}>View in GitHub</button>
-                <p>Calculator</p>
+                <button onClick = {snapEvents}>View in GitHub</button>
+                <p>Snapchat Events</p>
                 <div className = "skills-project">
-                    <button>HTML</button>
-                    <button>JS</button>
-                    <button>CSS</button>
+                    <button>React Native</button>
+                    <button>Supabase</button>
+                </div>
+            </div>
+            <div className = "project">
+                <button onClick = {kinoman}>View in GitHub</button>
+                <p>Kinoman</p>
+                <div className = "skills-project">
+                    <button>ReactJS</button>
+                    <button>Rest APIs</button>
                 </div>
             </div>
             <div className = "project">
@@ -112,7 +125,15 @@ function Projects() {
                     <button>CSS</button>
                 </div>
             </div>
-            
+            <div className = "project">
+                <button onClick = {openCalculator}>View in GitHub</button>
+                <p>Calculator</p>
+                <div className = "skills-project">
+                    <button>HTML</button>
+                    <button>JS</button>
+                    <button>CSS</button>
+                </div>
+            </div>
         </div>
     </div>
   )
